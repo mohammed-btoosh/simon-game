@@ -40,7 +40,7 @@ function animatePress(currentColour) {
 }
 
 var hasBeenCalled = false;
-$("body").on("keydown", () => {
+$("body").on("keydown touchstart", () => {
   if (!hasBeenCalled) {
     $("#level-title").text("Level " + level);
     nextSequence();
