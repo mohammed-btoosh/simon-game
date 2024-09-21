@@ -19,7 +19,7 @@ function nextSequence() {
   level++;
 }
 
-$(".btn").on("click touchstart", (e) => {
+$(".btn").on("keydown click touchstart", (e) => {
   var userChosenColour = e.target.id;
   userClickedPattern.push(userChosenColour);
   playSound(userChosenColour);
@@ -40,7 +40,7 @@ function animatePress(currentColour) {
 }
 
 var hasBeenCalled = false;
-$("body").on("keydown touchstart", () => {
+$("body").on("keydown click touchstart", () => {
   if (!hasBeenCalled) {
     $("#level-title").text("Level " + level);
     nextSequence();
