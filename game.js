@@ -19,7 +19,7 @@ function nextSequence() {
   level++;
 }
 
-$(".btn").on("click", (e) => {
+$(".btn").on("click touchstart", (e) => {
   var userChosenColour = e.target.id;
   userClickedPattern.push(userChosenColour);
   playSound(userChosenColour);
